@@ -1,0 +1,84 @@
+body {
+  background-image:url('http://sphotos-b.xx.fbcdn.net/hphotos-prn1/614745_10152013727975453_432291484_o.jpg');
+	background-attachment: fixed;
+	background-position: center -200px;
+}
+
+#bar{
+	z-index: 1;
+	position: relative;	
+	background-color: #000000;
+	min-width: 960px;
+	width: 102%;
+	margin-left: -1%;
+	margin-right: auto;
+	margin-top: -8px;
+	color: #ffffff;
+	height: 45px;
+}
+
+h1#name {
+	margin-left: 10px;
+	font-size: 16px;
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	float: left;
+}
+
+h1#name a {
+	text-decoration: none;
+	color: #ffffff;
+}
+h1#name a:visited {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+/*HORIZONTAL MENU USING
+ UNORDERED INLINE LIST*/
+ul#header {
+	margin-left: 10px;
+	float: left;
+	position: relative;
+	list-style-type: none;
+	padding: 0;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 12px;
+}
+
+.menuItem {
+	display: inline;
+	font-weight: bold;
+} 
+
+.menuItem a {
+	text-decoration: none;
+	padding: 5px;
+	color: #ffffff;
+	text-align: center;
+	border-left: 1px solid white;
+}
+
+.menuItem a:hover {
+	background: #00007A;
+}
+
+/*LNKS FOR THE RIGHT SIDE OF
+ NAV BAR USING UL INLINE LIST*/
+ul#right {
+	float: right;
+	position: relative;
+	list-style-type: none;
+	margin-right: 10px;
+	padding: 0;
+}
+
+.menuPic {
+	display: inline;
+}
+
+/*Centered */
+#centered {
+	width: 960px;
+	margin: 0 auto;
+}
