@@ -6,11 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "export": "next build && next export",
+    "export": "next export",
     "lint": "next lint",
     "prettier": "prettier --write pages/ source/",
-    "tsc": "tsc --noEmit",
-    "deploy": "rm -rf node_modules/.cache && next build && next export && touch out/.nojekyll && git add out/ && git commit -m \"Deploy Next.js to gh-pages\" && git subtree push --prefix out origin gh-pages"
+    "tsc": "tsc --noEmit"
   },
   "dependencies": {
     "@emotion/css": "^11.5.0",
