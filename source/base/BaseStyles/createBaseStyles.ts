@@ -39,6 +39,7 @@ const createBaseStyles = css`
     background-color: transparent;
     color: var(${VarNames.TextLink});
     -webkit-text-decoration-skip: objects;
+    text-decoration: none;
     transition-duration: ${DURATION.short};
     transition-property: background-color, border-color, color, outline-color;
     transition-timing-function: ${EASING['ease-in']};
@@ -50,11 +51,17 @@ const createBaseStyles = css`
     &:hover,
     &:focus {
       color: var(${VarNames.TextLinkHover});
+      text-decoration: underline;
     }
 
     &:active {
       color: var(${VarNames.TextLinkActive});
     }
+  }
+
+  hr {
+    margin-left: ${SPACING['2']};
+    margin-right: ${SPACING['2']};
   }
 `;
 

@@ -1,12 +1,12 @@
 import styled from '@emotion/styled';
-import { CONSTRAIN } from '../../config/theme';
+import { CONSTRAIN, SPACING } from '../../config/theme';
 
 const Main = styled('main')`
   margin-left: auto;
   margin-right: auto;
   max-width: ${CONSTRAIN.md};
-  padding-left: 1em;
-  padding-right: 1em;
+  padding-left: ${SPACING[2]};
+  padding-right: ${SPACING[2]};
 `;
 
 export default Main;

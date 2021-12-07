@@ -1,35 +1,32 @@
 import styled from '@emotion/styled';
-import {
-  BREAKPOINT,
-  PALETTE,
-  SPACING,
-  mediaMin,
-  VarNames,
-} from '../../config/theme';
+import { CONSTRAIN, SPACING } from '../../config/theme';
 
 const FooterWrapper = styled('footer')`
-  ${VarNames.TextLink}: ${PALETTE.white};
-  ${VarNames.TextLinkHover}: ${PALETTE.white};
-  ${VarNames.TextLinkActive}: ${PALETTE.white};
-  ${VarNames.TextLinkVisited}: ${PALETTE.white};
-  background: var(${VarNames.UiAccentDark});
-  color: ${PALETTE.white};
-  padding: ${SPACING['2']} 0 ${SPACING['2']};
-
-  ${mediaMin(BREAKPOINT.tabletLg)} {
-    padding: ${SPACING['5']} 0 ${SPACING['7']};
-  }
+  margin-left: auto;
+  margin-right: auto;
+  max-width: ${CONSTRAIN.md};
 `;
 
 const FooterInner = styled('div')`
   text-align: center;
+  padding-left: ${SPACING[2]};
+  padding-right: ${SPACING[2]};
 `;
 
 function Footer(): JSX.Element {
   return (
     <FooterWrapper>
+      <hr />
       <FooterInner>
-        <div>[FOOTER CONTENT]</div>
+        <div>
+          <a
+            href="https://www.youtube.com/watch?v=Hm3JodBR-vs"
+            rel="noreferrer"
+            target="_blank"
+          >
+            Neat
+          </a>
+        </div>
       </FooterInner>
     </FooterWrapper>
   );
