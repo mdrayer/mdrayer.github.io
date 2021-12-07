@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+import Spoiler from '../../source/components/Spoiler';
 import { parseInput } from '../../source/helpers/day-01/input';
 import { getStats, getSumStats } from '../../source/helpers/day-01/util';
 import { getInputFile } from '../../source/helpers/getFile';
@@ -12,22 +13,30 @@ const DayOne: NextPage<DayOneProps> = ({ input }) => {
   const sumStats = getSumStats(input);
   return (
     <AocDayTemplate
+      day={1}
       title="Day 1: Sonar Sweep"
       partOneTitle="How many measurements are larger than the previous measurement?"
       partOneContent={
         <p>
-          There were <strong>{stats.larger.toLocaleString()}</strong> larger
-          measurements. Additionally, there were {stats.equal.toLocaleString()}{' '}
-          equal measurements and {stats.smaller.toLocaleString()} smaller
-          measurements.
+          There were{' '}
+          <strong>
+            <Spoiler text={stats.larger.toLocaleString()} />
+          </strong>{' '}
+          larger measurements. Additionally, there were{' '}
+          {stats.equal.toLocaleString()} equal measurements and{' '}
+          {stats.smaller.toLocaleString()} smaller measurements.
         </p>
       }
       partTwoTitle="How many sums are larger than the previous sum?"
       partTwoContent={
         <p>
-          There were <strong>{sumStats.larger.toLocaleString()}</strong> larger
-          sums. Additionally, there were {sumStats.equal.toLocaleString()} equal
-          sums and {sumStats.smaller.toLocaleString()} smaller sums.
+          There were{' '}
+          <strong>
+            <Spoiler text={sumStats.larger.toLocaleString()} />
+          </strong>{' '}
+          larger sums. Additionally, there were{' '}
+          {sumStats.equal.toLocaleString()} equal sums and{' '}
+          {sumStats.smaller.toLocaleString()} smaller sums.
         </p>
       }
     />

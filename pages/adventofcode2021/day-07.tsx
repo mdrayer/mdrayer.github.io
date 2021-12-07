@@ -1,4 +1,5 @@
 import { NextPage } from 'next';
+import Spoiler from '../../source/components/Spoiler';
 import { parseInput } from '../../source/helpers/day-07/input';
 import {
   estimateFuel,
@@ -15,18 +16,25 @@ const DaySeven: NextPage<DaySevenProps> = ({ input }) => {
   const fuelPartTwo = estimateFuelPartTwo(input);
   return (
     <AocDayTemplate
+      day={7}
       title="Day 7: The Treachery of Whales"
       partOneTitle="Determine the horizontal position that the crabs can align to using the least fuel possible. How much fuel must they spend to align to that position?"
       partOneContent={
         <p>
           The amount of fuel spent would be{' '}
-          <strong>{fuelCount.toLocaleString()}</strong>.
+          <strong>
+            <Spoiler text={fuelCount.toLocaleString()} />
+          </strong>
+          .
         </p>
       }
       partTwoContent={
         <p>
           The amount of fuel spent would be{' '}
-          <strong>{fuelPartTwo.toLocaleString()}</strong>.
+          <strong>
+            <Spoiler text={fuelPartTwo.toLocaleString()} />
+          </strong>
+          .
         </p>
       }
       partTwoTitle="New formula. How much fuel must they spend to align to that position?"
