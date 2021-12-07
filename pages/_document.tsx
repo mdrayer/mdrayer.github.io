@@ -41,9 +41,20 @@ class MyDocument extends Document {
             crossOrigin="true"
           />
           <link
-            href="https://fonts.googleapis.com/css2?family=Space+Mono&display=optional"
+            rel="preload"
+            as="style"
+            href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap"
             rel="stylesheet"
           />
+          <noscript>
+            <link
+              rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap"
+            />
+          </noscript>
         </Head>
         <body>
           <Main />

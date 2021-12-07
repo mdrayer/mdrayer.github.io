@@ -7,7 +7,6 @@ function getFile(
 ): { filename: string; contents: string } {
   const inputDirectory = path.join('./public', directory);
   const filePath = path.join(inputDirectory, filename);
-  console.log(filePath);
   const contents = fs.readFileSync(filePath, 'utf8');
   return {
     filename,
