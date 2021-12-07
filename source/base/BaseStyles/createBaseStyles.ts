@@ -51,7 +51,7 @@ const createBaseStyles = css`
     &:hover,
     &:focus {
       color: var(${VarNames.TextLinkHover});
-      text-decoration: underline;
+      text-decoration: underline 1px;
     }
 
     &:active {

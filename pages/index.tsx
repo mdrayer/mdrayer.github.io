@@ -1,11 +1,9 @@
 import type { NextPage } from 'next';
-import Main from '../source/layouts/Main';
+import PageTemplate from '../source/layouts/PageTemplate';
 
 const Home: NextPage = () => {
   return (
-    <Main>
-      <h1>mdrayer.github.io</h1>
-
+    <PageTemplate>
       <p>
         Quibusdam reprehenderit vestibulum magnam congue alias, purus quisque,
         harum. Faucibus dolorum malesuada velit quae, faucibus. Laudantium,
@@ -58,7 +56,7 @@ const Home: NextPage = () => {
         quisquam interdum fringilla, delectus eleifend natoque tempor habitant
         laboriosam.
       </p>
-    </Main>
+    </PageTemplate>
   );
 };
 

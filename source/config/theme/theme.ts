@@ -64,7 +64,7 @@ const LINE_HEIGHT = {
 };
 
 const FONT_FAMILY = {
-  lato: '"Courier New", Courier, monospace',
+  monospace: '"Space Mono", "Courier New", Courier, monospace',
 };
 
 const FONT_SIZE = {

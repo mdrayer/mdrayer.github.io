@@ -24,7 +24,7 @@ const vars = css`
   ${VarNames.TextLinkHover}: ${BRAND.blue.dark};
   ${VarNames.TextLinkActive}: ${BRAND.blue.dark};
   ${VarNames.TextLinkVisited}: ${BRAND.blue.dark};
-  ${VarNames.FontFamilyBase}: ${FONT_FAMILY['lato']};
+  ${VarNames.FontFamilyBase}: ${FONT_FAMILY['monospace']};
   ${VarNames.UiAccent}: ${BRAND.blue.base};
   ${VarNames.UiAccentDark}: ${BRAND.blue['dark-1']};
   ${VarNames.UiAccentLight}: ${BRAND.blue['light']};
