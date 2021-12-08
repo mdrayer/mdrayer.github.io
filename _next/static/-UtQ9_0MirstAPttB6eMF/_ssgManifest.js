@@ -1,0 +1,1 @@
+self.__SSG_MANIFEST=new Set(["\u002Fadventofcode2021\u002Fday-01","\u002Fadventofcode2021\u002Fday-02","\u002Fadventofcode2021\u002Fday-07","\u002Fadventofcode2021\u002Fday-08"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()
