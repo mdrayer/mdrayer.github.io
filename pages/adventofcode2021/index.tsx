@@ -11,6 +11,7 @@ const DAY_LINKS: string[] = [
   'Day 5: Hydrothermal Venture',
   'Day 6: Lanternfish',
   'Day 7: The Treachery of Whales',
+  'Day 8: Seven Segment Search',
 ];
 
 const AdventPage: NextPage = () => {
