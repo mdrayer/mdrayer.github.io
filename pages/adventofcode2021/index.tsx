@@ -12,6 +12,7 @@ const DAY_LINKS: string[] = [
   'Day 6: Lanternfish',
   'Day 7: The Treachery of Whales',
   'Day 8: Seven Segment Search',
+  'Day 9: Smoke Basin',
 ];
 
 const AdventPage: NextPage = () => {
@@ -28,7 +29,7 @@ const AdventPage: NextPage = () => {
         </a>
         .
       </p>
-      <ol type="I" style={{ marginLeft: SPACING[2] }}>
+      <ol type="I" style={{ marginLeft: SPACING[3] }}>
         {DAY_LINKS.map((d, i) => (
           <li key={i}>
             <NextLink
