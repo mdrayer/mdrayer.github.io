@@ -15,6 +15,7 @@ const DAY_LINKS: string[] = [
   'Day 9: Smoke Basin',
   'Day 10: Syntax Scoring',
   'Day 11: Dumbo Octopus',
+  'Day 12: Passage Pathing',
 ];
 
 const AdventPage: NextPage = () => {
