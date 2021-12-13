@@ -31,7 +31,7 @@ const SpanWrapper = styled('span')<SpanWrapperProps>`
 // See https://github.com/dazulu/react-spoiler-tag
 
 interface SpoilerProps {
-  text: string;
+  text: number | string;
   textColor?: string;
   hiddenColor?: string;
   revealedColor?: string;
@@ -64,6 +64,8 @@ function Spoiler({
     }
   };
 
+  const displayText = typeof text === 'number' ? text.toLocaleString() : text;
+
   return (
     <SpanWrapper
       isHidden={isHidden}
@@ -77,11 +79,11 @@ function Spoiler({
       <span role="alert" style={{ color: textColor }}>
         {isHidden
           ? // Totally obscure the text from the DOM by replacing the text when hidden.
-            text
+            displayText
               .split('')
               .map(() => 'X')
               .join('')
-          : text}
+          : displayText}
       </span>
     </SpanWrapper>
   );
