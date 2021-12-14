@@ -63,6 +63,12 @@ const createBaseStyles = css`
     margin-left: ${SPACING['2']};
     margin-right: ${SPACING['2']};
   }
+
+  button {
+    background-color: transparent;
+    border: 1px solid var(${VarNames.UiBorderDark});
+    font-family: var(${VarNames.FontFamilyBase});
+  }
 `;
 
 export default createBaseStyles;
