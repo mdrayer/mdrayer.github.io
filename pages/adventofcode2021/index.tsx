@@ -19,6 +19,7 @@ const DAY_LINKS: string[] = [
   'Day 13: Transparent Origami',
   'Day 14: Extended Polymerization',
   'Day 15: Chiton',
+  'Day 16: Packet Decoder',
 ];
 
 const AdventPage: NextPage = () => {
