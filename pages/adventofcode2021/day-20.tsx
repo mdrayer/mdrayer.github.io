@@ -9,7 +9,9 @@ interface DayTwentyProps {
 }
 const DayTwenty: NextPage<DayTwentyProps> = ({ input }) => {
   const pt1 = getLightCount(input);
-  const pt2 = getLightCount(input, 50);
+  // const pt2 = getLightCount(input, 50);
+  // Part 2 takes longer than what I'd like for browsers. Using static value instead.
+  const pt2 = 18269;
   return (
     <AocDayTemplate
       title="Day 20: Trench Map"
