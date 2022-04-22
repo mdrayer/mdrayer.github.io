@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Centered from '../Centered';
+import NumberInput from '../NumberInput';
 import CircleChart from './CircleChart';
 import { RadarData, randomizeData } from './util';
 
@@ -81,81 +82,39 @@ function RadarChart(): JSX.Element {
         </button>
       </Centered>
       <Centered>
-        <div>
-          <label htmlFor="intervals">Intervals</label>
-          <input
-            type="number"
-            id="intervals"
-            name="intervals"
-            value={intervals}
-            onChange={e => {
-              let newValue = Number(e.target.value);
-              if (isNaN(newValue)) {
-                return;
-              }
-              // Ensure that the new value stays within range.
-              if (newValue < MIN_INTERVALS) {
-                newValue = MIN_INTERVALS;
-              } else if (newValue > MAX_INTERVALS) {
-                newValue = MAX_INTERVALS;
-              }
-              setIntervals(newValue);
-              setData(randomizeData(count, newValue, sides));
-            }}
-            min={MIN_INTERVALS}
-            max={MAX_INTERVALS}
-          />
-        </div>
-        <div>
-          <label htmlFor="sides">Polygon Sides</label>
-          <input
-            type="number"
-            id="sides"
-            name="sides"
-            value={sides}
-            onChange={e => {
-              let newValue = Number(e.target.value);
-              if (isNaN(newValue)) {
-                return;
-              }
-              // Ensure that the new value stays within range.
-              if (newValue < MIN_SIDES) {
-                newValue = MIN_SIDES;
-              } else if (newValue > MAX_SIDES) {
-                newValue = MAX_SIDES;
-              }
-              setSides(newValue);
-              setData(randomizeData(count, intervals, newValue));
-            }}
-            min={MIN_SIDES}
-            max={MAX_SIDES}
-          />
-        </div>
-        <div>
-          <label htmlFor="count">Series Count</label>
-          <input
-            type="number"
-            id="count"
-            name="count"
-            value={count}
-            onChange={e => {
-              let newValue = Number(e.target.value);
-              if (isNaN(newValue)) {
-                return;
-              }
-              // Ensure that the new value stays within range.
-              if (newValue < MIN_COUNT) {
-                newValue = MIN_COUNT;
-              } else if (newValue > MAX_COUNT) {
-                newValue = MAX_COUNT;
-              }
-              setCount(newValue);
-              setData(randomizeData(newValue, intervals, sides));
-            }}
-            min={MIN_COUNT}
-            max={MAX_COUNT}
-          />
-        </div>
+        <NumberInput
+          id="intervals"
+          label="Intervals"
+          max={MAX_INTERVALS}
+          min={MIN_INTERVALS}
+          onChange={newValue => {
+            setIntervals(newValue);
+            setData(randomizeData(count, newValue, sides));
+          }}
+          value={intervals}
+        />
+        <NumberInput
+          id="sides"
+          label="Polygon Sides"
+          max={MAX_SIDES}
+          min={MIN_SIDES}
+          onChange={newValue => {
+            setSides(newValue);
+            setData(randomizeData(count, intervals, newValue));
+          }}
+          value={sides}
+        />
+        <NumberInput
+          id="count"
+          label="Series Count"
+          max={MAX_COUNT}
+          min={MIN_COUNT}
+          onChange={newValue => {
+            setCount(newValue);
+            setData(randomizeData(newValue, intervals, sides));
+          }}
+          value={count}
+        />
       </Centered>
     </div>
   );
