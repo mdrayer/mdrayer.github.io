@@ -13,8 +13,9 @@ function getPoints(numberOfPoints: number, radius: number) {
   const points: Point[] = [];
   const theta = (Math.PI * 2) / numberOfPoints;
   for (let i = 0; i < numberOfPoints; i++) {
-    // Add the zero'd theta to get the first point above our (0, 0) center.
-    const a = theta * i + zerodTheta;
+    // Negate the zero'd theta to get the first point above the center at (0,r).
+    // Else, the first point would be located at (r,0) instead.
+    const a = theta * i - zerodTheta;
     const x = radius * Math.cos(a);
     const y = radius * Math.sin(a);
     points.push({ x, y });
@@ -87,7 +88,7 @@ function CircleChart({
                 )}
                 fill="none"
                 stroke="black"
-                // opacity={0.5}
+                opacity={0.5}
               />
             ))}
           {/* Draw lines to the center point */}
@@ -96,7 +97,7 @@ function CircleChart({
               <line
                 key={i}
                 x1={point.x}
-                y1={-point.y}
+                y1={point.y}
                 x2={0}
                 y2={0}
                 stroke="black"
@@ -106,7 +107,7 @@ function CircleChart({
             outerPolygonPoints.map(({ x, y }, i) => {
               const coords = interpolatePercent({ x: 0, y: 0 }, { x, y }, 1.05);
               return (
-                <g key={i} transform={`translate(${coords.x},${-coords.y})`}>
+                <g key={i} transform={`translate(${coords.x},${coords.y})`}>
                   <text
                     x={0}
                     y={0}
@@ -141,7 +142,7 @@ function CircleChart({
                   />
                   {showPoints &&
                     points.map((p, pi) => (
-                      <g key={pi} transform={`translate(${p.x},${-p.y})`}>
+                      <g key={pi} transform={`translate(${p.x},${p.y})`}>
                         <circle r={4} fill={fill} opacity={0.5} />
                         <text textAnchor="middle" dy="-0.37em">
                           {di}:{labels[pi]}

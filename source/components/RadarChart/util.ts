@@ -5,7 +5,7 @@ export interface Point {
 }
 
 function formPolygonPoints(points: Point[]): string {
-  return points.map(({ x, y }) => `${x},${-y}`).join(' ');
+  return points.map(({ x, y }) => `${x},${y}`).join(' ');
 }
 
 const POLYGON_FILLS = [
