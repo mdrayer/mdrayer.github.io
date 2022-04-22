@@ -7,17 +7,15 @@ import {
   RadarData,
 } from './util';
 
-const zerodTheta = (Math.PI * 2) / 4;
-
 function getPoints(numberOfPoints: number, radius: number) {
   const points: Point[] = [];
   const theta = (Math.PI * 2) / numberOfPoints;
   for (let i = 0; i < numberOfPoints; i++) {
-    // Negate the zero'd theta to get the first point above the center at (0,r).
-    // Else, the first point would be located at (r,0) instead.
-    const a = theta * i - zerodTheta;
-    const x = radius * Math.cos(a);
-    const y = radius * Math.sin(a);
+    // We want the first point to be above the center at (0,r).
+    // Use maths to rotate clockwise from that initial point.
+    const a = theta * i;
+    const x = radius * Math.sin(a);
+    const y = radius * -Math.cos(a);
     points.push({ x, y });
   }
   return points;
