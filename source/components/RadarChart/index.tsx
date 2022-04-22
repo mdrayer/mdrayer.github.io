@@ -29,7 +29,6 @@ function RadarChart(): JSX.Element {
 
   useEffect(() => {
     if (!data) {
-      console.log('useEffect');
       setData(randomizeData(count, intervals, sides));
     }
   }, [count, data, intervals, sides]);
