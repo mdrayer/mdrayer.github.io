@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { ReactNode } from 'react';
 import BackLink from '../../components/BackLink';
 import PageTemplate from '../PageTemplate';
