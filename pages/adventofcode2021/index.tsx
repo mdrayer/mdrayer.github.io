@@ -1,5 +1,6 @@
 import { NextPage } from 'next';
 import NextLink from 'next/link';
+import BackLink from '../../source/components/BackLink';
 import { SPACING } from '../../source/config/theme';
 import PageTemplate from '../../source/layouts/PageTemplate';
 
@@ -51,6 +52,7 @@ const AdventPage: NextPage = () => {
           </li>
         ))}
       </ol>
+      <BackLink href="/" />
     </PageTemplate>
   );
 };
