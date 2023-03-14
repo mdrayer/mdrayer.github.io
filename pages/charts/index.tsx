@@ -10,6 +10,11 @@ const ChartsPage: NextPage = () => (
       <li>
         <Link href="/charts/radar-chart">Radar Chart Geometry Fun</Link>
       </li>
+      <li>
+        <Link href="/charts/pi-infinite-series">
+          Calculating Pi - Infinite Series
+        </Link>
+      </li>
     </StyledUl>
     <BackLink href="/" />
   </PageTemplate>
